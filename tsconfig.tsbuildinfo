@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/components/captcha.tsx","./src/loaders/cloudflareloader.ts","./src/loaders/googleloader.ts","./src/types/index.ts"],"version":"5.9.3"}
