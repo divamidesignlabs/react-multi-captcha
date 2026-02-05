@@ -84,7 +84,6 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
       async function initCaptcha() {
         // If skip is enabled, call onVerify with a dummy token and return
         if (skip) {
-          console.log('CAPTCHA skipped');
           onVerify('skipped');
           setIsInitialized(true);
           return;
@@ -95,7 +94,6 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
         }
 
         try {
-          console.log(`Initializing ${provider} CAPTCHA...`);
 
           /**
            * ---------------- GOOGLE reCAPTCHA v3 ----------------
@@ -148,13 +146,11 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
 
                   callback: (token: string) => {
                     if (!isMounted) return;
-                    console.log(" Turnstile token received");
                     setIsInitialized(true);
                     onVerify(token);
                   },
 
                   "expired-callback": () => {
-                    console.log(" Turnstile token expired");
                     setIsInitialized(false);
                   },
 
@@ -170,7 +166,6 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
                 await new Promise((r) => setTimeout(r, 500));
                 try {
                   (window as any).turnstile.execute(widgetIdRef.current);
-                  console.log(" Cloudflare Turnstile invisible mode executed");
                 } catch (err) {
                   console.error(" Failed to execute invisible Turnstile:", err);
                 }
