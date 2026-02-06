@@ -10,6 +10,8 @@ export interface CaptchaProps {
   onVerify: (token: string) => void;
   theme?: 'light' | 'dark' | 'auto'; // Cloudflare only
   skip?: boolean;            // Skip captcha validation
+  containerProps?: React.HTMLAttributes<HTMLDivElement>;
+
 }
 
 export interface CaptchaHandle {

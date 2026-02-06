@@ -1,6 +1,6 @@
 {
-  "name": "captcha-react",
-  "version": "0.2.0",
+  "name": "@divami-labs/react-captcha",
+  "version": "0.0.1",
   "description": "Multi-provider captcha React package with imperative API (Google reCAPTCHA + Cloudflare Turnstile)",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -52,5 +52,10 @@
     "google"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.7"
+  }
 }
