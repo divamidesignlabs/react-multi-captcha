@@ -20,6 +20,7 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
       theme = "light",
       onVerify,
       skip = false,
+      containerProps,
     },
     ref
   ) => {
@@ -219,14 +220,13 @@ export const Captcha = forwardRef<CaptchaRef, CaptchaProps>(
       return (
         <div
           ref={widgetRef}
+          {...containerProps}
           style={{
-            minHeight:
-              mode === "checkbox" ? "65px" : "0px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            minHeight: mode === "checkbox" ? "65px" : "0px",
+            ...containerProps?.style,
           }}
         />
+
       );
     }
 
