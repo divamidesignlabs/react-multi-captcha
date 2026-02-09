@@ -1,4 +1,4 @@
-# captcha-react
+# @divami-labs/react-captcha
 
 > **Imperative, ref-based React CAPTCHA component** supporting Google reCAPTCHA v3 and Cloudflare Turnstile
 
@@ -15,7 +15,7 @@
 ## 📦 Installation
 
 ```bash
-npm install captcha-react
+npm install @divami-labs/react-captcha
 ```
 
 ## 🚀 Quick Start
@@ -24,7 +24,7 @@ npm install captcha-react
 
 ```tsx
 import { useRef } from 'react';
-import { Captcha, CaptchaHandle } from 'captcha-react';
+import { Captcha, CaptchaHandle } from '@divami-labs/react-captcha';
 
 function LoginForm() {
   const captchaRef = useRef<CaptchaHandle>(null);
@@ -65,7 +65,7 @@ function LoginForm() {
 
 ```tsx
 import { useRef } from 'react';
-import { Captcha, CaptchaHandle } from 'captcha-react';
+import { Captcha, CaptchaHandle } from '@divami-labs/react-captcha';
 
 function SignupForm() {
   const captchaRef = useRef<CaptchaHandle>(null);
@@ -124,7 +124,7 @@ function SignupForm() {
 ## 📂 Project Structure
 
 ```
-captcha-react/
+@divami-labs/react-captcha/
  ├─ components/
  │    └─ Captcha.tsx        # Main component
  ├─ loaders/
